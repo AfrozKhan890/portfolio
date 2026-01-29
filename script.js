@@ -1,4 +1,4 @@
-// script.js
+// script.js - UPDATED VERSION
 document.addEventListener('DOMContentLoaded', function() {
     // Carousel hover effect
     const carouselItems = document.querySelectorAll('.carousel-item');
@@ -78,6 +78,72 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // WhatsApp Contact Form Handler - FIXED NUMBER
+    const whatsappForm = document.getElementById('whatsappContactForm');
+    if (whatsappForm) {
+        whatsappForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const service = document.getElementById('service').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validation
+            if (!name || !phone || !email || !service || !message) {
+                alert('Please fill all required fields.');
+                return;
+            }
+            
+            // Clean phone number (remove spaces, dashes, etc.)
+            const cleanPhone = phone.replace(/\s+|-|\(|\)/g, '');
+            
+            // Format message for WhatsApp
+            const whatsappMessage = `*New Contact Request from Orbit Solutions Website*%0A%0A` +
+                                   `*Name:* ${name}%0A` +
+                                   `*Phone:* ${phone}%0A` +
+                                   `*Email:* ${email}%0A` +
+                                   `*Service Interested In:* ${service}%0A` +
+                                   `*Message:* ${message}%0A%0A` +
+                                   `_This message was sent via Orbit Solutions Website Contact Form_`;
+            
+            // CORRECT WhatsApp number - 92311276708
+            const whatsappNumber = '92311276708';
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappURL, '_blank');
+            
+            // Optional: Reset form after 1 second
+            setTimeout(() => {
+                whatsappForm.reset();
+            }, 1000);
+        });
+    }
+    
+    // Direct WhatsApp buttons handler (floating button and footer)
+    document.querySelectorAll('a[href*="wa.me"]').forEach(button => {
+        button.addEventListener('click', function(e) {
+            // If it's the floating button or footer button, let it open directly
+            if (this.classList.contains('whatsapp-float') || 
+                this.classList.contains('footer-whatsapp')) {
+                // Already set in HTML href
+                return;
+            }
+            
+            // For other WhatsApp buttons if any
+            e.preventDefault();
+            const currentHref = this.getAttribute('href');
+            if (currentHref) {
+                window.open(currentHref, '_blank');
+            }
+        });
+    });
+    
     // Image grid items animation on scroll
     const observerOptions = {
         threshold: 0.1,
@@ -100,45 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
         item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         observer.observe(item);
     });
-    
-  // WhatsApp Contact Form Handler
-const whatsappForm = document.getElementById('whatsappContactForm');
-if (whatsappForm) {
-    whatsappForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const email = document.getElementById('email').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-        
-        // Format message for WhatsApp
-        const whatsappMessage = `*New Contact Request from Orbit Solutions Website*%0A%0A` +
-                               `*Name:* ${name}%0A` +
-                               `*Phone:* ${phone}%0A` +
-                               `*Email:* ${email}%0A` +
-                               `*Service Interested In:* ${service}%0A` +
-                               `*Message:* ${message}%0A%0A` +
-                               `_This message was sent via Orbit Solutions Website Contact Form_`;
-        
-        // Your WhatsApp number
-        const whatsappNumber = '923312416094';
-        
-        // Create WhatsApp URL
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-        
-        // Open WhatsApp in new tab
-        window.open(whatsappURL, '_blank');
-        
-        // Reset form
-        whatsappForm.reset();
-        
-        // Show success message
-        alert('WhatsApp is opening with your message. Please send it to complete your inquiry.');
-    });
-}
     
     // Add animation to about section features
     document.querySelectorAll('.feature-item').forEach((item, index) => {
@@ -163,4 +190,15 @@ if (whatsappForm) {
     if (aboutSection) {
         aboutObserver.observe(aboutSection);
     }
+    
+    // Mobile menu close on click
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarToggler && !navbarToggler.classList.contains('collapsed')) {
+                navbarToggler.click();
+            }
+        });
+    });
 });
