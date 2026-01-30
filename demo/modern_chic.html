@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Minimal Chic | Girls Dresses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --white: #ffffff;
+            --beige: #f5f1eb;
+            --nude: #e8e0d7;
+            --charcoal: #2c2c2c;
+            --charcoal-light: #4a4a4a;
+            --charcoal-grey: #6a6a6a;
+            --accent: #d8c4b6;
+            --accent-dark: #c5b0a1;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--charcoal);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Minimal Header */
+        header {
+            background-color: var(--white);
+            padding: 25px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(44, 44, 44, 0.08);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span {
+            font-weight: 300;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+        
+        nav a {
+            font-family: 'Inter', sans-serif;
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 400;
+            font-size: 1rem;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--charcoal-grey);
+        }
+        
+        .nav-dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: var(--charcoal);
+            border-radius: 50%;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            transition: transform 0.3s ease;
+        }
+        
+        nav a:hover .nav-dot {
+            transform: translateX(-50%) scale(1);
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--charcoal);
+            color: white;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Hero Section - Minimal */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background-color: var(--beige);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+        
+        .hero-text {
+            flex: 1;
+            animation: slideUp 1s ease-out;
+        }
+        
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-image {
+            flex: 1;
+            animation: slideUp 1s ease-out 0.2s both;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            filter: grayscale(0.1);
+        }
+        
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: var(--charcoal);
+        }
+        
+        .hero h1 span {
+            font-weight: 300;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--charcoal-grey);
+            margin-bottom: 35px;
+            max-width: 500px;
+            font-weight: 300;
+        }
+        
+        .btn-minimal {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--charcoal);
+            padding: 14px 32px;
+            border-radius: 0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border: 1.5px solid var(--charcoal);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-minimal:hover {
+            background-color: var(--charcoal);
+            color: var(--white);
+        }
+        
+        /* Instagram Style Grid */
+        .instagram-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--charcoal);
+            letter-spacing: -0.5px;
+        }
+        
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .insta-post {
+            position: relative;
+            overflow: hidden;
+            background-color: var(--white);
+            border-radius: 2px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s ease forwards;
+        }
+        
+        .insta-post:nth-child(1) { animation-delay: 0.1s; }
+        .insta-post:nth-child(2) { animation-delay: 0.15s; }
+        .insta-post:nth-child(3) { animation-delay: 0.2s; }
+        .insta-post:nth-child(4) { animation-delay: 0.25s; }
+        .insta-post:nth-child(5) { animation-delay: 0.3s; }
+        .insta-post:nth-child(6) { animation-delay: 0.35s; }
+        
+        .insta-post:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .insta-img {
+            height: 320px;
+            overflow: hidden;
+        }
+        
+        .insta-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .insta-post:hover .insta-img img {
+            transform: scale(1.05);
+        }
+        
+        .insta-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 44, 44, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .insta-post:hover .insta-overlay {
+            opacity: 1;
+            background: rgba(44, 44, 44, 0.05);
+        }
+        
+        .insta-icons {
+            display: flex;
+            gap: 20px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .insta-post:hover .insta-icons {
+            transform: translateY(0);
+        }
+        
+        .insta-icons i {
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .insta-icons i:hover {
+            background-color: var(--charcoal);
+            color: white;
+        }
+        
+        .insta-info {
+            padding: 20px;
+            border-top: 1px solid rgba(44, 44, 44, 0.05);
+        }
+        
+        .insta-info h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--charcoal);
+        }
+        
+        .insta-info p {
+            color: var(--charcoal-grey);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            font-weight: 300;
+        }
+        
+        .insta-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price {
+            font-weight: 500;
+            color: var(--charcoal);
+            font-size: 1.2rem;
+        }
+        
+        /* Collection Banner */
+        .collection-banner {
+            background-color: var(--charcoal);
+            padding: 80px 0;
+            text-align: center;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .collection-banner h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: -1px;
+        }
+        
+        .collection-banner p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+        
+        .btn-inverse {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--white);
+            padding: 14px 32px;
+            border-radius: 0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border: 1.5px solid var(--white);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-inverse:hover {
+            background-color: var(--white);
+            color: var(--charcoal);
+        }
+        
+        /* Minimal Stats */
+        .stats-section {
+            padding: 60px 0;
+            background-color: var(--beige);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--charcoal);
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .stat-number::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 1px;
+            background-color: var(--charcoal);
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .stat-text {
+            font-size: 1rem;
+            color: var(--charcoal-grey);
+            font-weight: 300;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--white);
+            color: var(--charcoal);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(44, 44, 44, 0.08);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--charcoal);
+        }
+        
+        .footer-column p {
+            margin-bottom: 20px;
+            color: var(--charcoal-grey);
+            font-weight: 300;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(44, 44, 44, 0.05);
+            border-radius: 2px;
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--charcoal);
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--charcoal-grey);
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--charcoal);
+        }
+        
+        .newsletter-form {
+            display: flex;
+            margin-top: 15px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid rgba(44, 44, 44, 0.1);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            background-color: var(--white);
+        }
+        
+        .newsletter-form button {
+            padding: 12px 20px;
+            background-color: var(--charcoal);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .newsletter-form button:hover {
+            background-color: var(--charcoal-light);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(44, 44, 44, 0.05);
+            color: var(--charcoal-grey);
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+            
+            nav ul {
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero {
+                padding-top: 180px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .collection-banner h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        /* Instagram Stories Style */
+        .stories-container {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 20px 0 40px;
+            scrollbar-width: none;
+        }
+        
+        .stories-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .story {
+            flex: 0 0 auto;
+            width: 80px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .story-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f5f1eb, #e8e0d7);
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .story:hover .story-avatar {
+            transform: scale(1.05);
+        }
+        
+        .story-avatar.active::after {
+            content: '';
+            position: absolute;
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            border: 2px solid var(--charcoal);
+            top: -4px;
+            left: -4px;
+        }
+        
+        .story-name {
+            font-size: 0.8rem;
+            color: var(--charcoal);
+        }
+    </style>
+</head>
+<body>
+    <!-- Minimal Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">MINIMAL<span>CHIC</span></a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">SHOP <div class="nav-dot"></div></a></li>
+                    <li><a href="#">NEW IN <div class="nav-dot"></div></a></li>
+                    <li><a href="#">SUMMER <div class="nav-dot"></div></a></li>
+                    <li><a href="#">DAILY WEAR <div class="nav-dot"></div></a></li>
+                    <li><a href="#">LOOKBOOK <div class="nav-dot"></div></a></li>
+                    <li><a href="#">ABOUT <div class="nav-dot"></div></a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div class="cart-count">3</div>
+                </div>
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>MODERN MINIMAL<br><span>CHIC</span></h1>
+                <p>Effortless style for everyday moments. Clean lines, neutral tones, and comfortable fabrics designed for the modern woman (18-30).</p>
+                <a href="#" class="btn-minimal">SHOP THE COLLECTION</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Minimal Dress">
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Stories -->
+    <section class="container">
+        <div class="stories-container">
+            <div class="story">
+                <div class="story-avatar active">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="story-name">You</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="story-name">Sarah</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="story-name">Maya</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="story-name">Chloe</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="story-name">Emma</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="story-name">Zoe</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="story-name">Lily</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Style Grid -->
+    <section class="instagram-section">
+        <div class="container">
+            <h2 class="section-title">#MINIMALCHIC ON INSTAGRAM</h2>
+            <div class="insta-grid">
+                <div class="insta-post">
+                    <div class="insta-img">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Summer Dress">
+                    </div>
+                    <div class="insta-overlay">
+                        <div class="insta-icons">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-share"></i>
+                        </div>
+                    </div>
+                    <div class="insta-info">
+                        <h3>Linen Midi Dress</h3>
+                        <p>Perfect for summer days and casual outings. Made from 100% organic linen.</p>
+                        <div class="insta-price">
+                            <span class="price">$89.99</span>
+                            <a href="#" class="btn-minimal" style="padding: 8px 16px; font-size: 0.9rem;">ADD</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insta-post">
+                    <div class="insta-img">
+                        <img src="https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Casual Dress">
+                    </div>
+                    <div class="insta-overlay">
+                        <div class="insta-icons">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-share"></i>
+                        </div>
+                    </div>
+                    <div class="insta-info">
+                        <h3>Slip Dress</h3>
+                        <p>Minimalist design with adjustable straps. Perfect for layering or wearing alone.</p>
+                        <div class="insta-price">
+                            <span class="price">$79.99</span>
+                            <a href="#" class="btn-minimal" style="padding: 8px 16px; font-size: 0.9rem;">ADD</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insta-post">
+                    <div class="insta-img">
+                        <img src="https://images.unsplash.com/photo-1585487000160-6eb9ce6b5a74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Daily Wear">
+                    </div>
+                    <div class="insta-overlay">
+                        <div class="insta-icons">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-share"></i>
+                        </div>
+                    </div>
+                    <div class="insta-info">
+                        <h3>T-Shirt Dress</h3>
+                        <p>Ultra comfortable cotton blend for everyday wear. Available in 5 neutral shades.</p>
+                        <div class="insta-price">
+                            <span class="price">$65.99</span>
+                            <a href="#" class="btn-minimal" style="padding: 8px 16px; font-size: 0.9rem;">ADD</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insta-post">
+                    <div class="insta-img">
+                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Modern Dress">
+                    </div>
+                    <div class="insta-overlay">
+                        <div class="insta-icons">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-share"></i>
+                        </div>
+                    </div>
+                    <div class="insta-info">
+                        <h3>Wrap Dress</h3>
+                        <p>Flattering fit with minimalist details. Perfect for work or weekend brunch.</p>
+                        <div class="insta-price">
+                            <span class="price">$95.99</span>
+                            <a href="#" class="btn-minimal" style="padding: 8px 16px; font-size: 0.9rem;">ADD</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insta-post">
+                    <div class="insta-img">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Chic Dress">
+                    </div>
+                    <div class="insta-overlay">
+                        <div class="insta-icons">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-share"></i>
+                        </div>
+                    </div>
+                    <div class="insta-info">
+                        <h3>Asymmetrical Dress</h3>
+                        <p>Modern design with interesting silhouette. Made from sustainable materials.</p>
+                        <div class="insta-price">
+                            <span class="price">$110.99</span>
+                            <a href="#" class="btn-minimal" style="padding: 8px 16px; font-size: 0.9rem;">ADD</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insta-post">
+                    <div class="insta-img">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Minimal Dress">
+                    </div>
+                    <div class="insta-overlay">
+                        <div class="insta-icons">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-shopping-bag"></i>
+                            <i class="fas fa-share"></i>
+                        </div>
+                    </div>
+                    <div class="insta-info">
+                        <h3>Shirt Dress</h3>
+                        <p>Classic design with modern minimalist details. Perfect for layering.</p>
+                        <div class="insta-price">
+                            <span class="price">$85.99</span>
+                            <a href="#" class="btn-minimal" style="padding: 8px 16px; font-size: 0.9rem;">ADD</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Banner -->
+    <section class="collection-banner">
+        <div class="container">
+            <h2>SUMMER ESSENTIALS</h2>
+            <p>Discover our curated collection of minimalist dresses designed for warm days and effortless style. Light fabrics, clean designs, and versatile pieces for your daily wardrobe.</p>
+            <a href="#" class="btn-inverse">EXPLORE SUMMER EDIT</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5K+</div>
+                    <div class="stat-text">Instagram Followers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">Sustainable Materials</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2K+</div>
+                    <div class="stat-text">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">48h</div>
+                    <div class="stat-text">Delivery Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MINIMALCHIC</h3>
+                    <p>Modern minimalist fashion for the contemporary woman. Clean lines, quality fabrics, and effortless style.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>SHOP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Summer Collection</a></li>
+                        <li><a href="#">Daily Wear</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>HELP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>NEWSLETTER</h3>
+                    <p>Subscribe for updates on new collections, exclusive offers, and style inspiration.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button>→</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 MINIMALCHIC. Modern Minimal Chic for Girls (18-30). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Instagram-style interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Like button functionality
+            const likeButtons = document.querySelectorAll('.fa-heart');
+            likeButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.classList.toggle('fas');
+                    this.classList.toggle('far');
+                    if (this.classList.contains('fas')) {
+                        this.style.color = '#ff4757';
+                    } else {
+                        this.style.color = '';
+                    }
+                });
+            });
+            
+            // Shopping cart functionality
+            const addToCartButtons = document.querySelectorAll('.insta-price .btn-minimal');
+            const cartCount = document.querySelector('.cart-count');
+            let cartItems = 3; // Starting count
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    cartItems++;
+                    cartCount.textContent = cartItems;
+                    
+                    // Visual feedback
+                    const originalText = this.textContent;
+                    this.textContent = 'ADDED!';
+                    this.style.backgroundColor = '#2c2c2c';
+                    this.style.color = '#ffffff';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.backgroundColor = '';
+                        this.style.color = '';
+                    }, 1500);
+                });
+            });
+            
+            // Instagram stories interaction
+            const stories = document.querySelectorAll('.story');
+            stories.forEach(story => {
+                story.addEventListener('click', function() {
+                    // Remove active class from all stories
+                    stories.forEach(s => {
+                        s.querySelector('.story-avatar').classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked story
+                    this.querySelector('.story-avatar').classList.add('active');
+                });
+            });
+            
+            // Smooth scrolling for navigation
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Instagram post click interaction
+            const instaPosts = document.querySelectorAll('.insta-post');
+            instaPosts.forEach(post => {
+                post.addEventListener('click', function(e) {
+                    if(!e.target.closest('.insta-icons') && !e.target.closest('.btn-minimal')) {
+                        // Simulate opening a product detail view
+                        const title = this.querySelector('h3').textContent;
+                        alert(`Opening details for: ${title}`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

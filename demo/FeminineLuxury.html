@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Feminine Luxury | Girls Dresses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Poppins:wght@300;400;500&family=Playfair+Display:wght@400;500;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --blush-pink: #f8e1e7;
+            --ivory: #f9f5f0;
+            --off-white: #fefefe;
+            --rose-gold: #e0bfb8;
+            --dark-rose: #d4a798;
+            --text-dark: #5a4a42;
+            --text-light: #8a7b72;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--ivory);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--off-white);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            animation: slideDown 0.8s ease-out;
+        }
+        
+        @keyframes slideDown {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(0); }
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Cormorant', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: var(--rose-gold);
+            animation: gentlePulse 3s infinite alternate;
+        }
+        
+        @keyframes gentlePulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            font-family: 'Lato', sans-serif;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--rose-gold);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--rose-gold);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .header-icons i {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .header-icons i:hover {
+            color: var(--rose-gold);
+            transform: translateY(-3px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            background: linear-gradient(to right, var(--off-white) 40%, var(--blush-pink) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .hero-text {
+            flex: 1;
+            animation: fadeInLeft 1s ease-out;
+        }
+        
+        @keyframes fadeInLeft {
+            0% { opacity: 0; transform: translateX(-30px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        
+        .hero-image {
+            flex: 1;
+            animation: fadeInRight 1s ease-out 0.3s both;
+        }
+        
+        @keyframes fadeInRight {
+            0% { opacity: 0; transform: translateX(30px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: transform 0.5s ease;
+        }
+        
+        .hero-image img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .hero h1 span {
+            color: var(--rose-gold);
+            font-style: italic;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--rose-gold);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(224, 191, 184, 0.3);
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-rose);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(224, 191, 184, 0.4);
+        }
+        
+        /* Section Headings */
+        .section-title {
+            font-family: 'Cormorant', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--text-dark);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background-color: var(--rose-gold);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Dresses Section */
+        .dresses-section {
+            padding: 80px 0;
+            background-color: var(--off-white);
+        }
+        
+        .dresses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .dress-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s ease forwards;
+        }
+        
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .dress-card:nth-child(1) { animation-delay: 0.1s; }
+        .dress-card:nth-child(2) { animation-delay: 0.2s; }
+        .dress-card:nth-child(3) { animation-delay: 0.3s; }
+        .dress-card:nth-child(4) { animation-delay: 0.4s; }
+        
+        .dress-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dress-img {
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .dress-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .dress-card:hover .dress-img img {
+            transform: scale(1.05);
+        }
+        
+        .dress-info {
+            padding: 20px;
+        }
+        
+        .dress-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        
+        .dress-info p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .dress-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price {
+            font-weight: 600;
+            color: var(--rose-gold);
+            font-size: 1.3rem;
+        }
+        
+        /* Collection Banner */
+        .collection-banner {
+            background-color: var(--blush-pink);
+            padding: 60px 0;
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .collection-banner h2 {
+            font-family: 'Cormorant', serif;
+            font-size: 2.8rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            animation: floatText 6s ease-in-out infinite;
+        }
+        
+        @keyframes floatText {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .collection-banner p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+        
+        .rose-petal {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: var(--rose-gold);
+            opacity: 0.3;
+            border-radius: 50% 50% 50% 0;
+            animation: fall 15s linear infinite;
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--off-white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Cormorant', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--rose-gold);
+        }
+        
+        .footer-column p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--rose-gold);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero {
+                padding-top: 180px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="fas fa-crown"></i>
+                Élégance
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Bridal</a></li>
+                    <li><a href="#">Party Wear</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Soft Feminine <span>Luxury</span> for Girls</h1>
+                <p>Discover our exclusive collection of premium dresses designed for special occasions. Each piece is crafted with delicate fabrics and intricate details to create unforgettable moments.</p>
+                <a href="#" class="btn">Explore Collection</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Luxury Girls Dress">
+            </div>
+        </div>
+    </section>
+
+    <!-- Dresses Section -->
+    <section class="dresses-section">
+        <div class="container">
+            <h2 class="section-title">Our Premium Collection</h2>
+            <div class="dresses-grid">
+                <div class="dress-card">
+                    <div class="dress-img">
+                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Bridal Dress">
+                    </div>
+                    <div class="dress-info">
+                        <h3>Enchanted Blossom</h3>
+                        <p>Delicate lace and tulle combine in this exquisite bridal gown with floral embroidery and a flowing train.</p>
+                        <div class="dress-price">
+                            <span class="price">$349.99</span>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dress-card">
+                    <div class="dress-img">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Party Dress">
+                    </div>
+                    <div class="dress-info">
+                        <h3>Garden Party Elegance</h3>
+                        <p>A blush pink taffeta dress with rose gold accents, perfect for spring celebrations and formal events.</p>
+                        <div class="dress-price">
+                            <span class="price">$279.99</span>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dress-card">
+                    <div class="dress-img">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w-600&q=80" alt="Formal Dress">
+                    </div>
+                    <div class="dress-info">
+                        <h3>Ivory Dream</h3>
+                        <p>An off-white satin gown with delicate beading and a cinched waist, designed for sophisticated evening events.</p>
+                        <div class="dress-price">
+                            <span class="price">$299.99</span>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dress-card">
+                    <div class="dress-img">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Special Occasion Dress">
+                    </div>
+                    <div class="dress-info">
+                        <h3>Rose Gold Radiance</h3>
+                        <p>A shimmering dress with rose gold sequins and a layered tulle skirt, ideal for birthdays and celebrations.</p>
+                        <div class="dress-price">
+                            <span class="price">$259.99</span>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Banner -->
+    <section class="collection-banner">
+        <!-- Animated rose petals -->
+        <div id="rose-petals-container"></div>
+        
+        <div class="container">
+            <h2>Bridal & Special Occasion Collection</h2>
+            <p>Our exclusive luxury collection is designed for the most memorable moments. Each dress is crafted with premium fabrics, intricate details, and a touch of feminine elegance that makes every girl feel like royalty.</p>
+            <a href="#" class="btn">View Bridal Collection</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Élégance</h3>
+                    <p>Creating unforgettable moments through soft feminine luxury. Our premium dresses are designed for bridal, party wear, and special occasions.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; display: block; margin-bottom: 10px;">New Arrivals</a></li>
+                        <li><a href="#" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; display: block; margin-bottom: 10px;">Bridal Collection</a></li>
+                        <li><a href="#" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; display: block; margin-bottom: 10px;">Party Wear</a></li>
+                        <li><a href="#" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; display: block; margin-bottom: 10px;">Formal Dresses</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--rose-gold); margin-right: 10px;"></i> 123 Luxury Avenue, Fashion District</p>
+                    <p><i class="fas fa-phone" style="color: var(--rose-gold); margin-right: 10px;"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope" style="color: var(--rose-gold); margin-right: 10px;"></i> info@elegance.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Élégance | Soft Feminine Luxury. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create animated rose petals
+        document.addEventListener('DOMContentLoaded', function() {
+            const petalsContainer = document.getElementById('rose-petals-container');
+            const numberOfPetals = 15;
+            
+            for (let i = 0; i < numberOfPetals; i++) {
+                const petal = document.createElement('div');
+                petal.className = 'rose-petal';
+                
+                // Random size
+                const size = Math.random() * 20 + 20;
+                petal.style.width = `${size}px`;
+                petal.style.height = `${size}px`;
+                
+                // Random position
+                petal.style.left = `${Math.random() * 100}vw`;
+                
+                // Random animation delay and duration
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 10 + 10;
+                petal.style.animationDelay = `${delay}s`;
+                petal.style.animationDuration = `${duration}s`;
+                
+                petalsContainer.appendChild(petal);
+            }
+            
+            // Dress card hover effect enhancement
+            const dressCards = document.querySelectorAll('.dress-card');
+            dressCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
