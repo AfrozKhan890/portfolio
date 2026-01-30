@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Clean phone number (remove spaces, dashes, etc.)
             const cleanPhone = phone.replace(/\s+|-|\(|\)/g, '');
-            
+        
             // Format message for WhatsApp
             const whatsappMessage = `*New Contact Request from Orbit Solutions Website*%0A%0A` +
                                    `*Name:* ${name}%0A` +
