@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                    `*Message:* ${message}%0A%0A` +
                                    `_This message was sent via Orbit Solutions Website Contact Form_`;
             
-            // CORRECT WhatsApp number - 923312416094
-            const whatsappNumber = '923312416094';
+            // CORRECT WhatsApp number - 923112766708
+            const whatsappNumber = '923112766708';
             
             // Create WhatsApp URL
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
